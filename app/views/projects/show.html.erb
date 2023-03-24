@@ -1,0 +1,23 @@
+<h1><%= @project.name %></h1>
+
+<p><%= @project.description %></p>
+
+<h2>Comments</h2>
+
+<ul>
+  <% @project.comments.each do |comment| %>
+    <li><%= comment.body %></li>
+  <% end %>
+</ul>
+
+<h3>Add Comment</h3>
+
+<%= form_with(model: [@project, Comment.new], url: project_comments_path(@project)) do |form| %>
+  <%= form.label :body %>
+  <%= form.text_area :body %>
+
+  <%= form.submit "Add Comment" %>
+<% end %>
+
+<%= link_to "Edit", edit_project_path(@project) %>
+<%= link_to "Back", projects_path %>
