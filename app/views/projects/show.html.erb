@@ -1,23 +1,23 @@
-<h1><%= @project.name %></h1>
-
-<p><%= @project.description %></p>
-
-<h2>Comments</h2>
-
-<ul>
-  <% @project.comments.each do |comment| %>
-    <li><%= comment.body %></li>
+<div class="container">
+  <div class="project-header">
+    <div class="project-header-content">
+      <h1 class="project-header-title"><%= @project.name %></h1>
+      <p class="project-header-description">P<%= @project.description %></p>
+      <div class="project-status">
+        <%= render partial: "form", locals: { project: @project } %>
+      </div>
+    </div>
+  </div>
+  <ul>
+  <% @news_items.each do |ni| %>
+    <%= render partial: "news_items/news_item", locals: { news_item: ni } %>
   <% end %>
-</ul>
-
-<h3>Add Comment</h3>
-
-<%= form_with(model: [@project, Comment.new], url: project_comments_path(@project)) do |form| %>
-  <%= form.label :body %>
-  <%= form.text_area :body %>
-
-  <%= form.submit "Add Comment" %>
-<% end %>
-
-<%= link_to "Edit", edit_project_path(@project) %>
-<%= link_to "Back", projects_path %>
+  </ul>
+  <div class="comments">
+    <h3>Add Comment</h3>
+    <%= form_with(model: [@project, Comment.new], url: project_comments_path(@project)) do |form| %>
+    <%= form.text_area :body, placeholder: "Add a comment", class: "comment-form-input" %>
+    <%= form.submit "Add Comment", class: "comment-form-submit" %>
+    <% end %>
+  </div>
+</div>
