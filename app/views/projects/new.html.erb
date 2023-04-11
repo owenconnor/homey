@@ -22,6 +22,11 @@
     <%= form.text_area :description %>
   </div>
 
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.select :status, options_for_select(Project::VALID_STATUSES.map { |k| [k.humanize, k] }) %>
+  </div>
+
   <div class="actions">
     <%= form.submit "Create Project" %>
   </div>
