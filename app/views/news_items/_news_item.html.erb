@@ -1,0 +1,7 @@
+<li><span></span>
+  <div>
+    <div class="title"><%= news_item.title %></div>
+    <div class="info"><%= news_item.body %></div>
+    <div class="type"><%= news_item.user.email %></div>
+  </div> <span class="number"><span><%= news_item.created_at.strftime("%x") %></span></span>
+</li>

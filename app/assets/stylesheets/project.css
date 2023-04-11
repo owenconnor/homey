@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+body {
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background: #bea2e7;
+}
+.container ul {
+    margin: 0;
+    margin-top: 50px;
+    list-style: none;
+    position: relative;
+    padding: 1px 100px;
+    color: #fff;
+    font-size: 13px; }
+.container ul:before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    border-left: 2px dashed #fff; }
+.container ul li {
+    position: relative;
+    margin-left: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 14px;
+    border-radius: 6px;
+    width: 250px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08); }
+.container ul li:not(:first-child) {
+    margin-top: 60px; }
+.container ul li > span {
+    width: 2px;
+    height: 100%;
+    background: #fff;
+    left: -30px;
+    top: 0;
+    position: absolute; }
+.container ul li > span:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: absolute;
+    background: #86b7e7;
+    left: -5px;
+    top: 0; }
+/*.container ul li span:after {*/
+/*    top: 100%; }*/
+.container ul li > div {
+    margin-left: 10px; }
+
+.container div .title, .container div .type {
+    font-weight: 600;
+    font-size: 12px; }
+
+.container div .info {
+    font-weight: 300; }
+
+.container div > div {
+    margin-top: 5px; }
+
+.container span.number {
+    height: 100%; }
+.container span.number span {
+    position: absolute;
+    font-size: 10px;
+    left: -50px;
+    font-weight: bold; }
+/*.container span.number span:first-child {*/
+/*    top: 0; }*/
+/*.container span.number span:last-child {*/
+/*    top: 100%; }*/
+
+.project-header {
+    position: relative;
+    margin-left: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 14px;
+    border-radius: 6px;
+    width: 25%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
+    color: #fff;
+    font-size: 13px;
+}
+.comments {
+    margin-left: 30px;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 14px;
+    border-radius: 6px;
+    width: 25%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
+    color: #fff;
+    font-size: 13px;
+    width: 25%;
+}
+#comment_body {
+    width: 100%;
+    height: 100px;
+}
+
+
+
+.table-container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+}
+h2 small {
+    font-size: 0.5em;
+}
+.responsive-table li {
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08); }
+}
+.responsive-table .table-header {
+    background-color: #95a5a6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.responsive-table .table-row {
+    background-color: #fff;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.responsive-table .col-1 {
+    flex-basis: 20%;
+}
+.responsive-table .col-2 {
+    flex-basis: 55%;
+}
+.responsive-table .col-3 {
+    flex-basis: 10%;
+}
+.responsive-table .col-4 {
+    flex-basis: 15%;
+}
+@media all and (max-width: 767px) {
+    .responsive-table .table-header {
+        display: none;
+    }
+    .responsive-table li {
+        display: block;
+    }
+    .responsive-table .col {
+        flex-basis: 100%;
+    }
+    .responsive-table .col {
+        display: flex;
+        padding: 10px 0;
+    }
+    .responsive-table .col:before {
+        color: #6c7a89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+    }
+}
+.notice {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
